@@ -21,9 +21,9 @@
         out.println("没有把MySQL数据库的JDBC数据库驱动复制到JDK的拓展目录中");
     }
     try {
-        String url = "jdbc:mysql://localhost:3306/hjb_database";
+        String url = "jdbc:mysql://localhost:3306/jsp_database";
         String user = "root";
-        String password = "168168";
+        String password = "huang1107";
         con = DriverManager.getConnection(url, user, password);
         sql = con.createStatement();
         rs = sql.executeQuery("SELECT * from score");
