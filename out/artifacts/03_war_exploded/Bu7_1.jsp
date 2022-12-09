@@ -15,23 +15,24 @@
 <body>
 <%
     Connection conn = null;
-    try{
+    try {
         Class.forName("com.mysql.jdbc.Driver");
-    }catch (Exception e){
+    } catch (Exception e) {
         out.println("没有吧MySQL数据库的JDBC数据库驱动复制到JDK的拓展目录中");
-    }try {
+    }
+    try {
         String url = "jdbc:mysql://localhost:3306/hjb_database";
         String user = "root";
         String password = "168168";
-        conn = DriverManager.getConnection(url,user,password);
+        conn = DriverManager.getConnection(url, user, password);
         out.println("<h1>hjb的JDBC专用驱动数据库连接数据库成功！</h1>");
-    }catch (SQLException e){
+    } catch (SQLException e) {
         out.println(e.getMessage());
-    }finally {
+    } finally {
         try {
             if (conn != null) conn.close();
-        }catch (Exception e){
-            
+        } catch (Exception e) {
+
         }
     }
 %>
