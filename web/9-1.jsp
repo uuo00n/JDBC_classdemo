@@ -16,12 +16,12 @@
     Statement sql;
     ResultSet rs;
     try {
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
     } catch (Exception e) {
         out.println("没有把MySQL数据库的JDBC数据库驱动复制到JDK的拓展目录中");
     }
     try {
-        String url = "jdbc:mysql://localhost:3306/jsp_database";
+        String url = "jdbc:mysql://localhost:3306/jsp_database?serverTimezone=GMT";
         String user = "root";
         String password = "huang1107";
         con = DriverManager.getConnection(url, user, password);
